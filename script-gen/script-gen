@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Author: Hlomane
+# Created: 23 October 2023 - 2:56 PM
+# Last Modified: 23 October 2023 - 2:56 PM
+
+# Description: 
+# Generates bash script template file with with user executable permissions 
+
+# Usage:
+# script-gen filename
+
+# Create the file with user execute permissions
+file_name=$1
+touch $file_name
+chmod u+x $file_name
