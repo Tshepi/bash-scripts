@@ -11,6 +11,28 @@
 # script-gen filename
 
 # Create the file with user execute permissions
-file_name=$1
-touch $file_name
-chmod u+x $file_name
+script_name=$1
+touch $script_name
+chmod u+x $script_name
+
+cat << EOF > $script_name
+#!/bin/bash
+
+# Author: $USER
+# Created: $( date "+%d %B %Y - %H:%M:%S" )
+# Last Modified: $( date "+%d %B %Y - %H:%M:%S" )
+
+# Description: 
+# [Add short description about the script]
+
+# Usage:
+# $script_name [param]
+
+main()
+{
+    echo "Hello, World!"
+    exit
+}
+
+main
+EOF
